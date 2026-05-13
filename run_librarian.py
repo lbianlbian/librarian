@@ -9,12 +9,12 @@ from langchain_mistralai import ChatMistralAI
 embedding_model = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 DB_NAME = "timeline"
 URL = f"http://localhost:2480/api/v1/query/{DB_NAME}"
-AUTH = ('root', 'a81f46C3')
+AUTH = ('root', 'xxxx')
 
 # model = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0)
 model = ChatMistralAI(
     model="mistral-small-latest", # Or "codestral-latest" for code
-    api_key="ut3fvNH5z4BBiAq88V07cMAGNLXos48P"
+    api_key="xxxxx"
 )
 
 vectordb = FAISS.load_local("world_anvil_local", embedding_model, allow_dangerous_deserialization=True)
